@@ -23,6 +23,7 @@ const updateEventFile = () => {
   fs.writeFileSync(filePath, JSON.stringify(eventcount, null, 2), "utf-8");
 };
 
+
 // Step 2: Event Listeners
 emits.on("login", (a) => {
   eventcount.login++;

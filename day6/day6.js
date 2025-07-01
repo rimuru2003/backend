@@ -24,5 +24,4 @@ fs.appendFile(pathfile , "\n yoyo apex", "utf-8")
 
 fs.unlink(pathfile)
   .then(() => console.log("File deleted"))
-
   .catch(err => console.error(err));
