@@ -8,6 +8,7 @@ const pathfile = path.join(filename);
 async function runFile() {
   try {
      await fs.readdir(file);
+     console.log(file)
 
     await fs.writeFile(pathfile, "hi my anime is apex", "utf-8");
 
