@@ -8,6 +8,10 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(shortenedRoutes);
+app.set("view engine", "ejs")
+// app.set("views", "./views")   if in diffrent folder  
+
+
 
 //old method in express new method will be in routes folder
 

@@ -45,6 +45,10 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/report", async (req,res)=> {
+  res.render("report", {name : "<h1>Aryan</h1>" })
+})
+
 router.post("/", async (req, res) => {
   try {
     const { url, shortCode } = req.body;
