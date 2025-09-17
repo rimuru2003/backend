@@ -45,9 +45,14 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/report", async (req,res)=> {
-  res.render("report", {name : "<h1>Aryan</h1>" })
-})
+router.get("/report", async (req, res) => {
+   const students = [
+    { name: "Aryan", grade: "A", favoriteSubject: "Math" },
+    { name: "Ravi", grade: "B", favoriteSubject: "Science" },
+    { name: "Priya", grade: "A+", favoriteSubject: "English" }
+  ];
+  return res.render("report", { students });
+});
 
 router.post("/", async (req, res) => {
   try {
@@ -80,9 +85,7 @@ router.get("/:shortCode", async (req, res) => {
   }
 });
 
-
 // export default router             this is default export but not recomended in larger project
 
-
-// named exports   recomended for alger project 
-export const shortenedRoutes = router 
+// named exports   recomended for alger project
+export const shortenedRoutes = router;
