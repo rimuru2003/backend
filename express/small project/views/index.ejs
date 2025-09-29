@@ -31,10 +31,15 @@
         </li>
         ` ) .join("") -->
 
-        <% Object.entries(links) .map( ([shortCode, url]) =>{ %>
+        <% Object.entries(links).forEach(([shortCode, url]) => { %> <% const
+        truncatedUrl = url.length > 30 ? url.slice(0, 30) + "..." : url; %>
         <li>
-          <a href="/<%= shortCode %>" target="_blank"> ${host}/${shortCode} </a>
+          <a href="/<%= shortCode %>" target="_blank">
+            <%= host %>/<%= shortCode %>
+          </a>
+          - <%= truncatedUrl %>
         </li>
+        <% }) %>  
       </ul>
     </div>
 
